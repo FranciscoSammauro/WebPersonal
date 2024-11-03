@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <button id="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <div class="container" data-aos="fade-up">
+                <img src="Avatar.png" class="avatar">
+                <h1>Francisco Sammauro</h1>
+                <p>Desarrollador Web | Estudiante Autodidacta</p>
+                <a href="franciscoSammauroCV.pdf" class="btn download-cv">Descargar CV</a>
+            </div>
+        </section>
+
+        <section id="sobre-mi">
+            <div class="container" data-aos="fade-up">
+                <h2>Sobre Mí</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container" data-aos="fade-up">
+                <h2>Mis Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>SQLite</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-linux"></i>
+                        <span>Linux</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-code"></i>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-terminal"></i>
+                        <span>NeoVim</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos">
+            <div class="container">
+                <h2 data-aos="fade-up">Mis Proyectos</h2>
+                <div class="proyectos-grid">
+                    <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
+                        <img src="/placeholder.svg?height=150&width=250" alt="Proyecto 1">
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción breve del proyecto 1.</p>
+                        <a href="#" class="btn github-btn">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                    <div class="proyecto" data-aos="fade-up" data-aos-delay="200">
+                        <img src="/placeholder.svg?height=150&width=250" alt="Proyecto 2">
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción breve del proyecto 2.</p>
+                        <a href="#" class="btn github-btn">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                    <div class="proyecto" data-aos="fade-up" data-aos-delay="300">
+                        <img src="/placeholder.svg?height=150&width=250" alt="Proyecto 3">
+                        <h3>Proyecto 3</h3>
+                        <p>Descripción breve del proyecto 3.</p>
+                        <a href="#" class="btn github-btn">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                    <div class="proyecto" data-aos="fade-up" data-aos-delay="400">
+                        <img src="/placeholder.svg?height=150&width=250" alt="Proyecto 4">
+                        <h3>Proyecto 4</h3>
+                        <p>Descripción breve del proyecto 4.</p>
+                        <a href="#" class="btn github-btn">
+                            <i class="fab fa-github"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="container" data-aos="fade-up">
+                <h2>Contacto</h2>
+                <form id="contactForm" onsubmit="return false;">
+                    <input type="text" id="nombre" placeholder="Nombre" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <textarea id="mensaje" placeholder="Mensaje" required></textarea>
+                    <button type="button" class="btn" onclick="enviarCorreo()">Enviar</button>
+                </form>
+            </div>
+        </section>
+        
+        <script>
+        function enviarCorreo() {
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const mensaje = document.getElementById('mensaje').value;
+        
+            const subject = 'Nuevo mensaje de contacto';
+            const body = `Nombre: ${nombre}\nEmail: ${email}\nMensaje: ${mensaje}`;
+            const mailtoLink = `mailto:fs.sammauro@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+            window.location.href = mailtoLink;
+        }
+        </script>
+        
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Francisco Sammauro. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://instagram.com/frann_sammauro" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/FSammauro22630" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/FranciscoSammauro" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
